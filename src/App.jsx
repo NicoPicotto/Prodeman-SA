@@ -4,7 +4,7 @@ import theme from './styles/theme';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeView from './views/HomeView';
 import ContactView from './views/ContactView';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
 	return (

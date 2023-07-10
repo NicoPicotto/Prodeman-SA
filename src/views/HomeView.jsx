@@ -3,7 +3,7 @@ import { Stack, Heading } from '@chakra-ui/react';
 
 const HomeView = () => {
 	return (
-		<Stack>
+		<Stack bgColor="fondo">
 			<Heading>Welcome to the Chakra UI Template!</Heading>
 			<p>This is a text in poppins!</p>
 		</Stack>
