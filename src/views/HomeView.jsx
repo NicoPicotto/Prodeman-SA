@@ -3,9 +3,8 @@ import { Stack, Heading } from '@chakra-ui/react';
 
 const HomeView = () => {
 	return (
-		<Stack bgColor="fondo">
-			<Heading>Welcome to the Chakra UI Template!</Heading>
-			<p>This is a text in poppins!</p>
+		<Stack paddingInline='120px' paddingBlock='12px'>
+			<Heading>Hello world!</Heading>
 		</Stack>
 	);
 };

@@ -14,7 +14,7 @@ import idioma3 from '../../assets/idioma3.png';
 
 const Navbar = () => {
 	return (
-		<Stack>
+		<Stack gap='0'>
 			<Stack
 				bgColor='secundario'
 				w='100%'
@@ -69,7 +69,7 @@ const Navbar = () => {
 					<Link as={ReachLink} to='/' color='#646464' fontWeight='600'>
 						Educación
 					</Link>
-					<Stack direction="row">
+					<Stack direction='row'>
 						<Image src={idioma1} h='35px' />
 						<Image src={idioma2} h='35px' />
 						<Image src={idioma3} h='35px' />
