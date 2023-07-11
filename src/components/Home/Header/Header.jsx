@@ -1,6 +1,7 @@
 import React from 'react';
 import { Stack, Heading, Text, Image } from '@chakra-ui/react';
 import salado from '../../../assets/Salado-sin-piel.png';
+import fondo from '../../../assets/peanut.webp';
 
 const Header = () => {
 	return (
@@ -8,7 +9,7 @@ const Header = () => {
 			h='44.27em'
 			w='100%'
 			paddingInline='6.25em'
-			bgImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(90deg, rgba(130, 17, 11, 0.53) 0%, rgba(0, 0, 0, 0.20) 100%), url('src/assets/peanut.webp')`}
+			bgImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(90deg, rgba(130, 17, 11, 0.53) 0%, rgba(0, 0, 0, 0.20) 100%), url(${fondo})`}
 			bgBlendMode='multiply'
 			bgSize='cover'
 			direction='row'
