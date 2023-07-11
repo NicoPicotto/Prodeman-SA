@@ -6,13 +6,14 @@ const PrimaryButton = ({ text, link }) => {
 		<Button
 			bgColor='terciario'
 			color='white'
+			w="fit-content"
 			to={link}
-			fontSize='1em'
-			paddingInline='25px'
-			paddingBlock='8px'
-			borderRadius='20px'
+			fontSize='1.04em'
+			paddingInline='1.3em'
+			paddingBlock='0.42em'
+			borderRadius='full'
 			fontWeight='700'
-			_hover={{ bgColor: "#a31a10" }}
+			_hover={{ bgColor: '#a31a10' }}
 		>
 			{text}
 		</Button>

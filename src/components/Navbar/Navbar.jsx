@@ -18,27 +18,27 @@ const Navbar = () => {
 			<Stack
 				bgColor='secundario'
 				w='100%'
-				paddingInline='120px'
-				paddingBlock='12px'
+				paddingInline='6.25em'
+				paddingBlock='0.63em'
 				direction='row'
 				justify='flex-end'
 				align='center'
-				gap='24px'
+				gap='1.25em'
 			>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='25px' src={linkedin} />
+					<Image w='1.3em' src={linkedin} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='25px' src={facebook} />
+					<Image w='1.3em' src={facebook} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='25px' src={instagram} />
+					<Image w='1.3em' src={instagram} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='25px' src={twitter} />
+					<Image w='1.3em' src={twitter} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='25px' src={youtube} />
+					<Image w='1.3em' src={youtube} />
 				</Link>
 				<PrimaryButton text='Agendar reunión' />
 			</Stack>
@@ -48,31 +48,65 @@ const Navbar = () => {
 				align='center'
 				direction='row'
 				justify='space-between'
-				paddingInline='120px'
+				paddingInline='6.25em'
 			>
 				<Stack>
-					<Image src={logo} />
+					<Image w='12.76em' src={logo} />
 				</Stack>
-				<Stack direction='row' align='center' gap='20px'>
-					<Link as={ReachLink} to='/' color='#646464' fontWeight='600'>
-						Productos
-					</Link>
-					<Link as={ReachLink} to='/' color='#646464' fontWeight='600'>
-						Sustentabilidad
-					</Link>
-					<Link as={ReachLink} to='/' color='#646464' fontWeight='600'>
-						Sobre Prodeman
-					</Link>
-					<Link as={ReachLink} to='/' color='#646464' fontWeight='600'>
-						Trabajá con Nosotros
-					</Link>
-					<Link as={ReachLink} to='/' color='#646464' fontWeight='600'>
-						Educación
-					</Link>
-					<Stack direction='row'>
-						<Image src={idioma1} h='35px' />
-						<Image src={idioma2} h='35px' />
-						<Image src={idioma3} h='35px' />
+				<Stack direction='row' align='center' gap='3.85em'>
+					<Stack direction="row" gap="1.56em">
+						<Link
+							as={ReachLink}
+							to='/'
+							color='#646464'
+							fontSize='0.94em'
+							fontWeight='600'
+						>
+							Productos
+						</Link>
+						<Link
+							as={ReachLink}
+							to='/'
+							fontSize='0.94em'
+							color='#646464'
+							fontWeight='600'
+						>
+							Sustentabilidad
+						</Link>
+						<Link
+							as={ReachLink}
+							to='/'
+							fontSize='0.94em'
+							color='#646464'
+							fontWeight='600'
+						>
+							Sobre Prodeman
+						</Link>
+						<Link
+							as={ReachLink}
+							to='/'
+							fontSize='0.94em'
+							color='#646464'
+							fontWeight='600'
+						>
+							Trabajá con Nosotros
+						</Link>
+						<Link
+							as={ReachLink}
+							to='/'
+							fontSize='0.94em'
+							color='#646464'
+							fontWeight='600'
+						>
+							Educación
+						</Link>
+					</Stack>
+					<Stack>
+						<Stack direction='row'>
+							<Image src={idioma1} w='1.82em' />
+							<Image src={idioma2} w='1.82em' />
+							<Image src={idioma3} w='1.82em' />
+						</Stack>
 					</Stack>
 				</Stack>
 			</Stack>
