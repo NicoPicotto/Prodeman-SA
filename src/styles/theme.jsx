@@ -17,7 +17,7 @@ const styles = {
 	global: {
 		'html, body': {
 			bgColor: '#F5F5F5',
-			fontSize: "1vw",
+			fontSize: "0.8333333333333334vw;w",
 		},
 	},
 };

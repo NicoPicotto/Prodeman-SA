@@ -6,7 +6,7 @@ import Novedades from '../components/Home/Novedades/Novedades';
 const HomeView = () => {
 
 	return (
-		<Stack>
+		<Stack w="100%">
 			<Header />
 			<Novedades />
 		</Stack>

@@ -18,7 +18,7 @@ const Navbar = () => {
 			<Stack
 				bgColor='secundario'
 				w='100%'
-				paddingInline='6.25em'
+				paddingInline='15em'
 				paddingBlock='0.63em'
 				direction='row'
 				justify='flex-end'
@@ -48,7 +48,7 @@ const Navbar = () => {
 				align='center'
 				direction='row'
 				justify='space-between'
-				paddingInline='6.25em'
+				paddingInline='15em'
 			>
 				<Stack>
 					<Image w='12.76em' src={logo} />

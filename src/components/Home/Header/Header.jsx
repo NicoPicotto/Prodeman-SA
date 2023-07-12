@@ -8,7 +8,7 @@ const Header = () => {
 		<Stack
 			h='44.27em'
 			w='100%'
-			paddingInline='6.25em'
+			paddingInline='15em'
 			bgImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(90deg, rgba(130, 17, 11, 0.53) 0%, rgba(0, 0, 0, 0.20) 100%), url(${fondo})`}
 			bgBlendMode='multiply'
 			bgSize='cover'

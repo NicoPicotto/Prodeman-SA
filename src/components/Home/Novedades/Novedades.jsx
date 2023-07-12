@@ -24,7 +24,7 @@ const Novedades = () => {
 	}, []);
 
 	return (
-		<Stack w='100%' paddingInline='6.25em' paddingBlock='6.25em'>
+		<Stack w='100%' paddingInline='15em' paddingBlock='6.25em'>
 			<Titles
 				title='NOVEDADES'
 				subtitle='Las noticias más recientes del rubro y nuestra empresa.'
