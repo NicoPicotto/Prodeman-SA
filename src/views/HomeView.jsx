@@ -8,7 +8,7 @@ import Consumo from '../components/Home/Consumo/Consumo';
 const HomeView = () => {
 
 	return (
-		<Stack w="100%">
+		<Stack w="100%" gap="0">
 			<Header />
 			<Novedades />
 			<Produccion />
