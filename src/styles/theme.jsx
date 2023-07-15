@@ -4,7 +4,7 @@ const colors = {
 	primario: '#a17424',
 	secundario: '#631009',
 	terciario: '#B91E13',
-	negro: '#0D0D0D',
+	negro: '#323232',
 	fondo: '#F5F5F5',
 };
 
