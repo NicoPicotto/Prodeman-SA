@@ -11,8 +11,12 @@ import logo from '../../assets/logo.png';
 import idioma1 from '../../assets/idioma1.png';
 import idioma2 from '../../assets/idioma2.png';
 import idioma3 from '../../assets/idioma3.png';
+import idioma4 from '../../assets/idioma4.png';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+	const { t, i18n } = useTranslation();
+
 	return (
 		<Stack gap='0'>
 			<Stack
@@ -26,21 +30,21 @@ const Navbar = () => {
 				gap='1.25em'
 			>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='1.3em' src={linkedin} />
+					<Image w='1.3em' h='1.3em' src={linkedin} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='1.3em' src={facebook} />
+					<Image w='1.3em' h='1.3em' src={facebook} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='1.3em' src={instagram} />
+					<Image w='1.3em' h='1.3em' src={instagram} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='1.3em' src={twitter} />
+					<Image w='1.3em' h='1.3em' src={twitter} />
 				</Link>
 				<Link as={ReachLink} to='/' color='white'>
-					<Image w='1.3em' src={youtube} />
+					<Image w='1.3em' h='1.3em' src={youtube} />
 				</Link>
-				<PrimaryButton text='Agendar reunión' />
+				<PrimaryButton text={t('navbar.agendar')} />
 			</Stack>
 			<Stack
 				bgColor='white'
@@ -54,7 +58,7 @@ const Navbar = () => {
 					<Image w='12.76em' src={logo} />
 				</Stack>
 				<Stack direction='row' align='center' gap='3.85em'>
-					<Stack direction="row" gap="1.56em">
+					<Stack direction='row' gap='1.56em'>
 						<Link
 							as={ReachLink}
 							to='/'
@@ -62,7 +66,7 @@ const Navbar = () => {
 							fontSize='0.94em'
 							fontWeight='600'
 						>
-							Productos
+							{t('navbar.productos')}
 						</Link>
 						<Link
 							as={ReachLink}
@@ -71,7 +75,7 @@ const Navbar = () => {
 							color='#646464'
 							fontWeight='600'
 						>
-							Sustentabilidad
+							{t('navbar.sustentabilidad')}
 						</Link>
 						<Link
 							as={ReachLink}
@@ -80,7 +84,7 @@ const Navbar = () => {
 							color='#646464'
 							fontWeight='600'
 						>
-							Sobre Prodeman
+							{t('navbar.sobreProdeman')}
 						</Link>
 						<Link
 							as={ReachLink}
@@ -89,7 +93,7 @@ const Navbar = () => {
 							color='#646464'
 							fontWeight='600'
 						>
-							Trabajá con Nosotros
+							{t('navbar.trabaja')}
 						</Link>
 						<Link
 							as={ReachLink}
@@ -98,14 +102,35 @@ const Navbar = () => {
 							color='#646464'
 							fontWeight='600'
 						>
-							Educación
+							{t('navbar.educacion')}
 						</Link>
 					</Stack>
 					<Stack>
 						<Stack direction='row'>
-							<Image src={idioma1} w='1.82em' />
-							<Image src={idioma2} w='1.82em' />
-							<Image src={idioma3} w='1.82em' />
+							<Image
+								cursor='pointer'
+								src={idioma1}
+								w='1.82em'
+								onClick={() => i18n.changeLanguage('en')}
+							/>
+							<Image
+								cursor='pointer'
+								src={idioma2}
+								w='1.82em'
+								onClick={() => i18n.changeLanguage('pr')}
+							/>
+							<Image
+								cursor='pointer'
+								src={idioma3}
+								w='1.82em'
+								onClick={() => i18n.changeLanguage('zh')}
+							/>
+							<Image
+								cursor='pointer'
+								src={idioma4}
+								w='1.82em'
+								onClick={() => i18n.changeLanguage('es')}
+							/>
 						</Stack>
 					</Stack>
 				</Stack>
