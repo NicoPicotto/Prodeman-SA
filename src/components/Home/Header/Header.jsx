@@ -2,8 +2,11 @@ import React from 'react';
 import { Stack, Heading, Text, Image } from '@chakra-ui/react';
 import salado from '../../../assets/Salado-sin-piel.png';
 import fondo from '../../../assets/peanut.webp';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Header = () => {
+	const { t } = useTranslation();
+
 	return (
 		<Stack
 			h='44.27em'
@@ -18,12 +21,16 @@ const Header = () => {
 		>
 			<Stack maxW='30.99em' color='white' gap='1.46em'>
 				<Text fontSize='3.65em' lineHeight='101%'>
-					MANÍ ARGENTINO CON CALIDAD DE <Text as='b'>EXPORTACIÓN</Text>
+					<Trans i18nKey='header.title'>
+						MANÍ ARGENTINO CON CALIDAD DE <Text as='b'>EXPORTACIÓN</Text>
+					</Trans>
 				</Text>
 				<Text fontSize='1.56em' lineHeight='119.1%'>
-					En <Text as='b'>Prodeman</Text> trabajan más de 600 personas,
-					dedicadas a llevar a cabo cada etapa productiva y de comercialización
-					del maní.
+					<Trans i18nKey='header.subtitle'>
+						En <Text as='b'>Prodeman</Text> trabajan más de 600 personas,
+						dedicadas a llevar a cabo cada etapa productiva y de
+						comercialización del maní.
+					</Trans>
 				</Text>
 			</Stack>
 			<Stack>
