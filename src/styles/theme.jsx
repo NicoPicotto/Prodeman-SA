@@ -8,6 +8,7 @@ const colors = {
 	fondo: '#F5F5F5',
 };
 
+
 const fonts = {
 	body: `'Poppins', sans-serif`,
 	heading: `'Poppins', sans-serif`,
@@ -17,7 +18,7 @@ const styles = {
 	global: {
 		'html, body': {
 			bgColor: '#F5F5F5',
-			fontSize: "0.8333333333333334vw;w",
+			fontSize: "0.8333333333333334vw;",
 		},
 	},
 };
