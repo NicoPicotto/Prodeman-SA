@@ -9,10 +9,9 @@ const PrimaryButton = ({ text, link, pad }) => {
 			w='fit-content'
 			to={link}
 			border='1px solid #B91E13'
-			fontSize='1.04em'
+			fontSize='1.25rem'
 			boxShadow='0px 2px 2px 0px rgba(0, 0, 0, 0.25);'
-			paddingInline='1.3em'
-			paddingBlock='0.42em'
+			padding="8px 25px"
 			borderRadius='full'
 			fontWeight='700'
 			_hover={{ bgColor: 'white', color: 'terciario', boxShadow: 'none' }}

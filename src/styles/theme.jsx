@@ -1,5 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 
+
+
 const colors = {
 	primario: '#a17424',
 	secundario: '#631009',
@@ -16,9 +18,9 @@ const fonts = {
 
 const styles = {
 	global: {
-		'html, body': {
+		'html': {
 			bgColor: '#F5F5F5',
-			fontSize: "0.8333333333333334vw;",
+			fontSize: "12px",
 		},
 	},
 };

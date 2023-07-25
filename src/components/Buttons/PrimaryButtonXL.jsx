@@ -9,10 +9,9 @@ const PrimaryButtonXL = ({ text, link }) => {
 			w='fit-content'
 			to={link}
 			border='1px solid #B91E13'
-			fontSize='1.56em'
+			fontSize='1.875rem'
 			boxShadow='0px 2px 2px 0px rgba(0, 0, 0, 0.25);'
-			paddingInline="3.49em"
-			paddingBlock='1.09em'
+			padding="1.5rem 4rem"
 			borderRadius='full'
 			fontWeight='700'
 			_hover={{ bgColor: 'white', color: 'terciario', boxShadow: 'none' }}

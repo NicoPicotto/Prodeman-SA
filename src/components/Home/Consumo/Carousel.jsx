@@ -6,23 +6,20 @@ import verde from '../../../assets/3manikingverde.png';
 
 const InfiniteCarousel = () => {
 	return (
-		<Stack direction='row' gap='0.99em'>
+		<Stack direction='row' gap='1.188rem'>
 			<Image
-				w='17.24em'
 				filter='drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));'
-				h='33.07em'
+				h='32rem'
 				src={naranja}
 			/>
 			<Image
-				w='17.24em'
 				filter='drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));'
-				h='33.07em'
+				h='32rem'
 				src={rojo}
 			/>
 			<Image
-				w='17.24em'
 				filter='drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));'
-				h='33.07em'
+				h='32rem'
 				src={verde}
 			/>
 		</Stack>
