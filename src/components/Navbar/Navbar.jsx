@@ -27,22 +27,22 @@ const Navbar = () => {
 					direction='row'
 					justify='flex-end'
 					align='center'
-					gap='24px'
+					gap='1.5rem'
 				>
 					<Link as={ReachLink} to='/' color='white'>
-						<Image w='25px' h='25px' src={linkedin} />
+						<Image w='1.8rem' h='1.8rem' src={linkedin} />
 					</Link>
 					<Link as={ReachLink} to='/' color='white'>
-						<Image w='25px' h='25px' src={facebook} />
+						<Image w='1.8rem' h='1.8rem' src={facebook} />
 					</Link>
 					<Link as={ReachLink} to='/' color='white'>
-						<Image w='25px' h='25px' src={instagram} />
+						<Image w='1.8rem' h='1.8rem' src={instagram} />
 					</Link>
 					<Link as={ReachLink} to='/' color='white'>
-						<Image w='25px' h='25px' src={twitter} />
+						<Image w='1.8rem' h='1.8rem' src={twitter} />
 					</Link>
 					<Link as={ReachLink} to='/' color='white'>
-						<Image w='25px' h='25px' src={youtube} />
+						<Image w='1.8rem' h='1.8rem' src={youtube} />
 					</Link>
 					<PrimaryButton text={t('navbar.agendar')} />
 				</Stack>
@@ -64,7 +64,7 @@ const Navbar = () => {
 								as={ReachLink}
 								to='/'
 								color='#646464'
-								fontSize='1rem'
+								fontSize='1.125rem'
 								fontWeight='600'
 							>
 								{t('navbar.productos')}
@@ -72,7 +72,7 @@ const Navbar = () => {
 							<Link
 								as={ReachLink}
 								to='/'
-								fontSize='1rem'
+								fontSize='1.125rem'
 								color='#646464'
 								fontWeight='600'
 							>
@@ -81,7 +81,7 @@ const Navbar = () => {
 							<Link
 								as={ReachLink}
 								to='/'
-								fontSize='1rem'
+								fontSize='1.125rem'
 								color='#646464'
 								fontWeight='600'
 							>
@@ -90,7 +90,7 @@ const Navbar = () => {
 							<Link
 								as={ReachLink}
 								to='/'
-								fontSize='1rem'
+								fontSize='1.125rem'
 								color='#646464'
 								fontWeight='600'
 							>
@@ -99,7 +99,7 @@ const Navbar = () => {
 							<Link
 								as={ReachLink}
 								to='/'
-								fontSize='1rem'
+								fontSize='1.125rem'
 								color='#646464'
 								fontWeight='600'
 							>

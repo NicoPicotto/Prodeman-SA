@@ -6,6 +6,7 @@ import Produccion from '../components/Home/Produccion/Produccion';
 import Consumo from '../components/Home/Consumo/Consumo';
 import SobreProdeman from '../components/Home/SobreProdeman/SobreProdeman';
 import Sustentabilidad from '../components/Home/Sustentabilidad/Sustentabilidad';
+import Origen from '../components/Home/Origen/Origen';
 
 const HomeView = () => {
 
@@ -17,6 +18,7 @@ const HomeView = () => {
 			<Consumo />
 			<SobreProdeman />
 			<Sustentabilidad />
+			<Origen />
 		</Stack>
 	);
 };
