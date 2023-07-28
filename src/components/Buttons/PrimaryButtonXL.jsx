@@ -11,7 +11,7 @@ const PrimaryButtonXL = ({ text, link }) => {
 			border='1px solid #B91E13'
 			fontSize='1.875rem'
 			boxShadow='0px 2px 2px 0px rgba(0, 0, 0, 0.25);'
-			padding="1.5rem 4rem"
+			padding="2rem 4rem"
 			borderRadius='full'
 			fontWeight='700'
 			_hover={{ bgColor: 'white', color: 'terciario', boxShadow: 'none' }}
