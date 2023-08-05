@@ -1,5 +1,12 @@
 import React from 'react';
-import { Stack, Heading, Text, Link, Image } from '@chakra-ui/react';
+import {
+	Stack,
+	Heading,
+	Text,
+	Link,
+	Image,
+	useMediaQuery,
+} from '@chakra-ui/react';
 import {
 	BiLogoFacebook,
 	BiLogoInstagram,
@@ -13,6 +20,8 @@ import footerLogos2 from '../../assets/Footer/logosFooter2.png';
 import pdmLogo from '../../assets/Footer/prodemanlogo.png';
 
 const Footer = () => {
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
+
 	return (
 		<>
 			<Stack
@@ -23,8 +32,15 @@ const Footer = () => {
 				paddingBottom='2.5rem'
 			>
 				<Stack w='90%' maxW='1400px'>
-					<Stack direction='row' justify='space-between'>
-						<Stack w='15rem' gap='1rem'>
+					<Stack
+						direction={isMobile ? 'column' : 'row'}
+						justify='space-between'
+					>
+						<Stack
+							w={isMobile ? '100%' : '15rem'}
+							marginBottom={isMobile && '1em'}
+							gap='1rem'
+						>
 							<Heading as='h4' fontSize='1.25rem' color='negro'>
 								Contacto
 							</Heading>
@@ -36,7 +52,11 @@ const Footer = () => {
 								General Cabrera – Córdoba Argentina – X5809AHP.
 							</Text>
 						</Stack>
-						<Stack w='15rem' gap='1rem'>
+						<Stack
+							w={isMobile ? '100%' : '15rem'}
+							marginBottom={isMobile && '1em'}
+							gap='1rem'
+						>
 							<Heading as='h4' fontSize='1.25rem' color='negro'>
 								¿Reclamos?
 							</Heading>
@@ -53,7 +73,11 @@ const Footer = () => {
 								</Text>
 							</Link>
 						</Stack>
-						<Stack w='15rem' gap='1rem'>
+						<Stack
+							w={isMobile ? '100%' : '15rem'}
+							marginBottom={isMobile && '1em'}
+							gap='1rem'
+						>
 							<Heading as='h4' fontSize='1.25rem' color='negro'>
 								Tu opinión importa
 							</Heading>
@@ -70,7 +94,11 @@ const Footer = () => {
 								</Text>
 							</Link>
 						</Stack>
-						<Stack w='15rem' gap='1rem'>
+						<Stack
+							w={isMobile ? '100%' : '15rem'}
+							marginBottom={isMobile && '1em'}
+							gap='1rem'
+						>
 							<Heading as='h4' fontSize='1.25rem' color='negro'>
 								Privacidad de datos
 							</Heading>
@@ -87,12 +115,17 @@ const Footer = () => {
 								</Text>
 							</Link>
 						</Stack>
-						<Stack w='15rem' gap='2rem' justify='flex-end'>
+						<Stack
+							w={isMobile ? '100%' : '15rem'}
+							gap='2rem'
+							justify={isMobile ? 'flex-start' : 'flex-end'}
+							direction={isMobile ? 'row' : 'column'}
+						>
 							<Stack direction='row' gap='1.7rem'>
 								<Stack
 									border='1px solid #28292B'
-									w='2rem'
-									h='2rem'
+									w='3rem'
+									h='3rem'
 									borderRadius='full'
 									padding='2px'
 									align='center'
@@ -102,8 +135,8 @@ const Footer = () => {
 								</Stack>
 								<Stack
 									border='1px solid #28292B'
-									w='2rem'
-									h='2rem'
+									w='3rem'
+									h='3rem'
 									borderRadius='full'
 									padding='2px'
 									align='center'
@@ -117,8 +150,8 @@ const Footer = () => {
 									padding='2px'
 									align='center'
 									justify='center'
-									w='2rem'
-									h='2rem'
+									w='3rem'
+									h='3rem'
 								>
 									<BiLogoLinkedin fontSize='1.3rem' />
 								</Stack>
@@ -126,8 +159,8 @@ const Footer = () => {
 							<Stack direction='row' gap='1.7rem'>
 								<Stack
 									border='1px solid #28292B'
-									w='2rem'
-									h='2rem'
+									w='3rem'
+									h='3rem'
 									borderRadius='full'
 									padding='2px'
 									align='center'
@@ -137,8 +170,8 @@ const Footer = () => {
 								</Stack>
 								<Stack
 									border='1px solid #28292B'
-									w='2rem'
-									h='2rem'
+									w='3rem'
+									h='3rem'
 									borderRadius='full'
 									padding='2px'
 									align='center'
@@ -148,8 +181,8 @@ const Footer = () => {
 								</Stack>
 								<Stack
 									border='1px solid #28292B'
-									w='2rem'
-									h='2rem'
+									w='3rem'
+									h='3rem'
 									borderRadius='full'
 									padding='2px'
 									align='center'
@@ -172,13 +205,13 @@ const Footer = () => {
 				<Stack
 					w='90%'
 					maxW='1400px'
-					direction='row'
+					direction={isMobile ? 'column' : 'row'}
 					justify='space-between'
 					align='center'
 				>
-					<Image src={footerLogos1} objectFit='contain' h='3.3rem' />
-					<Image src={footerLogos2} objectFit='contain' h='3.3rem' />
-					<Image src={pdmLogo} objectFit='contain' h='3.3rem' />
+					<Image src={footerLogos1} objectFit='contain' h='3.3rem' marginBottom={isMobile && "1em"} />
+					<Image src={footerLogos2} objectFit='contain' h='3.3rem' marginBottom={isMobile && "1em"}/>
+					<Image src={pdmLogo} objectFit='contain' h='3.3rem' marginBottom={isMobile && "1em"}/>
 					<Text color='negro' fontSize='1rem'>
 						© 2023 Todos los derechos reservados
 					</Text>

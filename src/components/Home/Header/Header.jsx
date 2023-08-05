@@ -1,35 +1,49 @@
 import React from 'react';
-import { Stack, Heading, Text, Image } from '@chakra-ui/react';
+import { Stack, useMediaQuery, Text, Image } from '@chakra-ui/react';
 import salado from '../../../assets/Salado-sin-piel.png';
 import fondo from '../../../assets/peanut.webp';
 import { useTranslation, Trans } from 'react-i18next';
 
 const Header = () => {
 	const { t } = useTranslation();
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	return (
 		<Stack
-			h='53.125rem'
-			bgImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(90deg, rgba(130, 17, 11, 0.53) 0%, rgba(0, 0, 0, 0.20) 100%), url(${fondo})`}
+			h={isMobile ? 'auto' : '53.125rem'}
+			bgImage={isMobile ? `linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(90deg, rgba(130, 17, 11, 0.53) 0%, rgba(0, 0, 0, 0.20) 100%), url(${fondo})` : `linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(90deg, rgba(130, 17, 11, 0.53) 0%, rgba(0, 0, 0, 0.20) 100%), url(${fondo})`}
 			bgBlendMode='multiply'
 			bgSize='cover'
 			align='center'
-			justify="center"
+			justify='center'
 		>
 			<Stack
-				maxW='1400px'
-				w='90%'
+				maxW={isMobile ? '90%' : '1400px'}
+				w={isMobile ? '100%' : '90%'}
 				direction='row'
 				align='center'
-				justify='space-between'
+				justify={isMobile ? 'center' : 'space-between'}
+				paddingBlock={isMobile && '4em'}
 			>
-				<Stack maxW='33.688rem' color='white' gap='1.75rem'>
-					<Text fontSize='4rem' lineHeight='101%'>
+				<Stack
+					maxW={isMobile ? '90%' : '33.688rem'}
+					color='white'
+					gap='1.75rem'
+				>
+					<Text
+						fontSize='3rem'
+						lineHeight='101%'
+						textAlign={isMobile && 'center'}
+					>
 						<Trans i18nKey='header.title'>
 							MANÍ ARGENTINO CON CALIDAD DE <Text as='b'>EXPORTACIÓN</Text>
 						</Trans>
 					</Text>
-					<Text fontSize='1.875rem' lineHeight='119.1%'>
+					<Text
+						fontSize={isMobile ? '1.5em' : '1.875rem'}
+						lineHeight='119.1%'
+						textAlign={isMobile && 'center'}
+					>
 						<Trans i18nKey='header.subtitle'>
 							En <Text as='b'>Prodeman</Text> trabajan más de 600 personas,
 							dedicadas a llevar a cabo cada etapa productiva y de
@@ -37,7 +51,7 @@ const Header = () => {
 						</Trans>
 					</Text>
 				</Stack>
-				<Stack>
+				<Stack display={isMobile && 'none'}>
 					<Image w='28.625rem' src={salado} />
 				</Stack>
 			</Stack>

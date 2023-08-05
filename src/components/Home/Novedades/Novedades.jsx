@@ -1,27 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Stack, Grid, GridItem, Text } from '@chakra-ui/react';
+import useFetch from '../../../hooks/useFetch';
+import { Stack, Grid, GridItem, Text, useMediaQuery } from '@chakra-ui/react';
 import Titles from '../../Titles/Titles';
 import PrimaryButton from '../../Buttons/PrimaryButton';
 
 const Novedades = () => {
-	const [data, setData] = useState(null);
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
-	useEffect(() => {
-		fetch('https://jsonplaceholder.typicode.com/photos')
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error(`HTTP error! status: ${response.status}`);
-				}
-				return response.json();
-			})
-			.then((data) => {
-				const lastFourItems = data.slice(-4);
-				setData(lastFourItems);
-			})
-			.catch((error) => {
-				console.error('There was an error!', error);
-			});
-	}, []);
+	const { loading, error, data } = useFetch(
+		'http://localhost:1337/api/noticias?populate=*'
+	);
+
+	if (loading) return <p>Loading...</p>;
+	if (error) return <p>Error</p>;
+	const absoluteUrl = 'http://localhost:1337';
+
+	console.log(
+		data.data[0].attributes.imagen.data.attributes.formats.thumbnail.url
+	);
 
 	return (
 		<Stack w='100%' paddingBlock='7.5rem' align='center'>
@@ -35,16 +31,23 @@ const Novedades = () => {
 						<Grid
 							h='34.375rem'
 							templateRows='repeat(2, 1fr)'
-							templateColumns='repeat(3, 1fr)'
+							templateColumns={isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'}
 							gap={6}
 						>
 							<GridItem colSpan={1} rowSpan={2}>
 								<Stack
-									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${data[0].thumbnailUrl})`}
+									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${
+										absoluteUrl +
+										data.data[0].attributes.imagen.data.attributes.formats
+											.thumbnail.url
+									})`}
 									bgBlendMode='multiply'
 									height='100%'
 									borderRadius='20px 20px 0 20px'
 									p='2.08em'
+									bgRepeat='no-repeat'
+									bgSize='cover'
+									bgPos='center'
 									justify='flex-end'
 									boxShadow='0px 4px 4px 0px rgba(0, 0, 0, 0.25);'
 								>
@@ -55,18 +58,25 @@ const Novedades = () => {
 										lineHeight={1.1}
 										marginBottom='0.52em'
 									>
-										{data[0].title}
+										{data.data[0].attributes.titulo}
 									</Text>
 									<PrimaryButton text='¡Ver más!' />
 								</Stack>
 							</GridItem>
 							<GridItem colSpan={1} rowSpan={2}>
 								<Stack
-									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${data[1].thumbnailUrl})`}
+									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${
+										absoluteUrl +
+										data.data[1].attributes.imagen.data.attributes.formats
+											.thumbnail.url
+									})`}
 									bgBlendMode='multiply'
 									height='100%'
 									borderRadius='20px 20px 0 20px'
 									p='2.08em'
+									bgRepeat='no-repeat'
+									bgSize='cover'
+									bgPos='center'
 									justify='flex-end'
 									boxShadow='0px 4px 4px 0px rgba(0, 0, 0, 0.25);'
 								>
@@ -77,18 +87,25 @@ const Novedades = () => {
 										lineHeight={1.1}
 										marginBottom='0.52em'
 									>
-										{data[1].title}
+										{data.data[1].attributes.titulo}
 									</Text>
 									<PrimaryButton text='¡Ver más!' />
 								</Stack>
 							</GridItem>
-							<GridItem colSpan={1}>
+							<GridItem colSpan={1} display={isMobile && 'none'}>
 								<Stack
-									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${data[2].thumbnailUrl})`}
+									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${
+										absoluteUrl +
+										data.data[2].attributes.imagen.data.attributes.formats
+											.thumbnail.url
+									})`}
 									bgBlendMode='multiply'
 									height='100%'
 									borderRadius='20px 20px 0 20px'
 									p='2.08em'
+									bgRepeat='no-repeat'
+									bgSize='cover'
+									bgPos='top'
 									justify='flex-end'
 									boxShadow='0px 4px 4px 0px rgba(0, 0, 0, 0.25);'
 								>
@@ -99,18 +116,25 @@ const Novedades = () => {
 										lineHeight={1.1}
 										marginBottom='0.52em'
 									>
-										{data[2].title}
+										{data.data[2].attributes.titulo}
 									</Text>
 									<PrimaryButton text='¡Ver más!' />
 								</Stack>
 							</GridItem>
-							<GridItem colSpan={1}>
+							<GridItem colSpan={1} display={isMobile && 'none'}>
 								<Stack
-									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${data[3].thumbnailUrl})`}
+									bgImage={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.64%, rgba(114, 73, 14, 0.75) 100%), url(${
+										absoluteUrl +
+										data.data[3].attributes.imagen.data.attributes.formats
+											.thumbnail.url
+									})`}
 									bgBlendMode='multiply'
 									height='100%'
 									borderRadius='20px 20px 0 20px'
 									p='2.08em'
+									bgRepeat='no-repeat'
+									bgSize='cover'
+									bgPos='center'
 									justify='flex-end'
 									boxShadow='0px 4px 4px 0px rgba(0, 0, 0, 0.25);'
 								>
@@ -121,7 +145,7 @@ const Novedades = () => {
 										lineHeight={1.1}
 										marginBottom='0.52em'
 									>
-										{data[3].title}
+										{data.data[3].attributes.titulo}
 									</Text>
 									<PrimaryButton text='¡Ver más!' />
 								</Stack>
