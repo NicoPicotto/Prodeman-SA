@@ -41,10 +41,10 @@ const Footer = () => {
 							marginBottom={isMobile && '1em'}
 							gap='1rem'
 						>
-							<Heading as='h4' fontSize='1.25rem' color='negro'>
+							<Heading as='h4' fontSize={isMobile ? '1.6rem' : '1.25rem'} color='negro'>
 								Contacto
 							</Heading>
-							<Heading as='h5' fontSize='1rem' color='negro'>
+							<Heading as='h5' fontSize={isMobile ? '1.2rem' : '1rem'} color='negro'>
 								Administración central y planta +54 358 4933500
 							</Heading>
 							<Text color='negro'>
@@ -57,10 +57,10 @@ const Footer = () => {
 							marginBottom={isMobile && '1em'}
 							gap='1rem'
 						>
-							<Heading as='h4' fontSize='1.25rem' color='negro'>
+							<Heading as='h4' fontSize={isMobile ? '1.6rem' : '1.25rem'}  color='negro'>
 								¿Reclamos?
 							</Heading>
-							<Heading as='h5' fontSize='1rem' color='negro'>
+							<Heading as='h5' fontSize={isMobile ? '1.2rem' : '1rem'} color='negro'>
 								Canal de denuncias
 							</Heading>
 							<Text>
@@ -68,7 +68,7 @@ const Footer = () => {
 								cualquier irregularidad.
 							</Text>
 							<Link>
-								<Text as='b' color='negro'>
+								<Text as='b' color='negro' fontSize={isMobile && "1.2rem"}>
 									Hacer denuncia
 								</Text>
 							</Link>
@@ -78,10 +78,10 @@ const Footer = () => {
 							marginBottom={isMobile && '1em'}
 							gap='1rem'
 						>
-							<Heading as='h4' fontSize='1.25rem' color='negro'>
+							<Heading as='h4' fontSize={isMobile ? '1.6rem' : '1.25rem'}  color='negro'>
 								Tu opinión importa
 							</Heading>
-							<Heading as='h5' fontSize='1rem' color='negro'>
+							<Heading as='h5' fontSize={isMobile ? '1.2rem' : '1rem'} color='negro'>
 								Canal de denuncias
 							</Heading>
 							<Text>
@@ -89,7 +89,7 @@ const Footer = () => {
 								satisfacción es muy importante para nosotros.
 							</Text>
 							<Link>
-								<Text as='b' color='negro'>
+								<Text as='b' color='negro' fontSize={isMobile && "1.2rem"}>
 									Hacer encuesta
 								</Text>
 							</Link>
@@ -99,10 +99,10 @@ const Footer = () => {
 							marginBottom={isMobile && '1em'}
 							gap='1rem'
 						>
-							<Heading as='h4' fontSize='1.25rem' color='negro'>
+							<Heading as='h4' fontSize={isMobile ? '1.6rem' : '1.25rem'}  color='negro'>
 								Privacidad de datos
 							</Heading>
-							<Heading as='h5' fontSize='1rem' color='negro'>
+							<Heading as='h5' fontSize={isMobile ? '1.2rem' : '1rem'} color='negro'>
 								Canal de denuncias
 							</Heading>
 							<Text>
@@ -110,7 +110,7 @@ const Footer = () => {
 								comprometidos con la seguridad de su información.
 							</Text>
 							<Link>
-								<Text as='b' color='negro'>
+								<Text as='b' color='negro' fontSize={isMobile && "1.2rem"}>
 									Conocé nuestra política
 								</Text>
 							</Link>
@@ -118,7 +118,7 @@ const Footer = () => {
 						<Stack
 							w={isMobile ? '100%' : '15rem'}
 							gap='2rem'
-							justify={isMobile ? 'flex-start' : 'flex-end'}
+							justify={isMobile ? 'center' : 'flex-end'}
 							direction={isMobile ? 'row' : 'column'}
 						>
 							<Stack direction='row' gap='1.7rem'>

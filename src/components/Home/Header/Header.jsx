@@ -31,7 +31,7 @@ const Header = () => {
 					gap='1.75rem'
 				>
 					<Text
-						fontSize='3rem'
+						fontSize={isMobile ? '3rem' : "4rem"}
 						lineHeight='101%'
 						textAlign={isMobile && 'center'}
 					>

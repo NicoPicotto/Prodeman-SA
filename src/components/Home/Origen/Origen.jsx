@@ -22,7 +22,7 @@ const Origen = () => {
 		>
 			<Stack w='90%' maxW='1400px' align='center' gap='1.8rem'>
 				<Titles title='NUESTRO ORIGEN EN TODO EL MUNDO' color='white' />
-				<Heading fontSize='2rem' color='white' marginTop="1.8rem">
+				<Heading fontSize='2rem' color='white' marginTop="1.8rem" textAlign="center">
 					COMIENZA A CULTIVAR MANÍ
 				</Heading>
 				<Text
